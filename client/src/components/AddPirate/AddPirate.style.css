@@ -1,0 +1,16 @@
+.labels{
+    text-align:end;
+}
+#catch{
+    display: flex;
+    justify-content: end;
+}
+@media (max-width: 576px) {
+    .labels{
+        text-align:start;
+    }
+    #catch{
+        display: flex;
+        justify-content: start;
+    }
+ }
