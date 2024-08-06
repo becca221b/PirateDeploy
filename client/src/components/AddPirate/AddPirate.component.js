@@ -20,7 +20,7 @@ const AddPirate = () =>{
 
     const createPirate = (data) => {
         
-        axios.post('http://localhost:8000/api/pirate/new',data )
+        axios.post('https://piratesapp.onrender.com/api/pirate/new',data )
             .then((response) => {
                 alert("Added succesfully");
                 navigate("/pirates")

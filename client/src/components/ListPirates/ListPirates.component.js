@@ -23,7 +23,7 @@ const ListPirates = (props) =>{
 
     
     const remove = (e) =>{
-        axios.delete(`http://localhost:8000/api/pirate/delete/${e.target.value}/`)
+        axios.delete(`https://piratesapp.onrender.com/api/pirate/delete/${e.target.value}/`)
       
         .then(alert("Man in the water! Bye Bye!"))
         

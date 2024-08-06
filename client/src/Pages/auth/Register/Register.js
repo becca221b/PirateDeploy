@@ -14,7 +14,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'http://localhost:8000/api/register', {name, email, password})
+        axios.post( 'https://piratesapp.onrender.com/api/register', {name, email, password})
         .then(result => {
             console.log(result);
             if(result.data.message === "Already registered"){

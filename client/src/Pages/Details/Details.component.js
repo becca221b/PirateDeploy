@@ -13,7 +13,7 @@ const Details = () =>{
         hookHand: false});
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/pirate/${params.id}/`)
+        axios.get(`https://piratesapp.onrender.com/api/pirate/${params.id}/`)
              
              .then( response => {
                 setResult(response.data.result);
@@ -34,7 +34,7 @@ const Details = () =>{
     
     const editPirate = (data) => {
         
-        axios.put(`http://localhost:8000/api/pirate/${params.id}`,data)
+        axios.put(`https://piratesapp.onrender.com/api/pirate/${params.id}`,data)
             .then((response) => { 
                 //console.log(response)  
                 console.log('Switch updated:', response.data);

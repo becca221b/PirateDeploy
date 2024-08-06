@@ -12,7 +12,7 @@ const MainPage = (props) => {
     const navigate = useNavigate();
    
     useEffect(()=> {
-        axios.get('http://localhost:8000/api/pirates')
+        axios.get('https://piratesapp.onrender.com/api/pirates')
             .then((response) => {
                 setPirates(response.data.pirates)
                 //console.log(response.data)
