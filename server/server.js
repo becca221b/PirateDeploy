@@ -2,9 +2,11 @@ const port = process.env.PORT || 8000
 const express = require('express');
 const cors = require('cors')
 const app = express();
-const mongoose = require('mongoose');
+
 
 const dbURI = process.env.MONGODB_URI;
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
+
 const createAdminAccount = require('./scripts/admin');
 
 require('./config/mongoose.config')
