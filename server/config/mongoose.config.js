@@ -20,6 +20,15 @@ mongoose.connect(dbURI, {
 })
     .catch((err) => {
     console.error('Error connecting to MongoDB:', err);
+    if (err.name === 'MongoNetworkError') {
+        console.error('Network issue. Please check your internet connection.');
+      } else if (err.name === 'MongoParseError') {
+        console.error('There is an issue with the URI string.');
+      } else if (err.message.includes('Authentication failed')) {
+        console.error('Authentication failed. Please check your username and password.');
+      } else {
+        console.error('Unknown error:', err);
+      }
 });
       
    
