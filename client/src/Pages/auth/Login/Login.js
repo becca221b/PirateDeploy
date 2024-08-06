@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'http://localhost:8000/api/login', {email, password,
+        axios.post( 'https://piratesapp.onrender.com/api/login', {email, password,
             headers:{
                 "Content-Type": "appication/json"
            },
