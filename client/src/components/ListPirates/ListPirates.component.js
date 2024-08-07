@@ -36,7 +36,9 @@ const ListPirates = (props) =>{
         {props.pirates.map((pirate, index) => {
             return <div key={pirate._id} className='container text-center'id="container">
                 <div className='row d-flex align-items-center'>
-                    <div className='col'>{pirate.imageUrl}</div>
+                    
+                    <img src={pirate.imageUrl} className='col' id="pirate-photo" alt="profile photo" />
+
                     <div className='col'>
                         <p className="title">{pirate.name}</p>
                         
