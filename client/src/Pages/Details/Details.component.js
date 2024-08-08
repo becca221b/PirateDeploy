@@ -53,7 +53,7 @@ const Details = () =>{
             </div>
             <div>
                 <div>
-                    <img src="" alt={result.imageUrl}/>
+                    <img src={result.imageUrl} alt="foto"/>
                 </div>
                 <div>
                     <h3>About</h3>

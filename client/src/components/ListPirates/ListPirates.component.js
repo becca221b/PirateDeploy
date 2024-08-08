@@ -36,16 +36,18 @@ const ListPirates = (props) =>{
         {props.pirates.map((pirate, index) => {
             return <div key={pirate._id} className='container text-center'id="container">
                 <div className='row d-flex align-items-center'>
+                    <div className='col'>
+                        <img src={pirate.imageUrl}  id="pirate-photo" alt="profile photo" />
+                    </div>
                     
-                    <img src={pirate.imageUrl} className='col' id="pirate-photo" alt="profile photo" />
 
                     <div className='col'>
                         <p className="title">{pirate.name}</p>
                         
                         <div className="">
-                            <Button className="btn me-2" onClick={()=>{navigate("/pirate/"+pirate._id)}}>View Pirate</Button>
+                            <Button className="btn me-2 mb-2" onClick={()=>{navigate("/pirate/"+pirate._id)}}>View Pirate</Button>
                             {user.role === 'admin' && (
-                                <Button className="btn" value={pirate._id} onClick={remove}>Walk the Plank</Button>
+                                <Button className="btn mb-2" value={pirate._id} onClick={remove}>Walk the Plank</Button>
                             )}
                             
                         </div>
